@@ -1,19 +1,26 @@
-Proyecto corregido para el parcial.
+# Parcial 2 – Cinema Nova (Backend)
 
-Instrucciones:
-1. `mvn clean package`
-2. `mvn spring-boot:run`
-3. H2 console: http://localhost:8080/h2-console
-   URL: jdbc:h2:mem:parcialdb
+## Autor
+**Juan Jose Martinez Perez**
 
-Estructura principal:
-- Entities: com.example.parcial2.entities (Cine, DetalleCine, Sala)
-- Repositorios: com.example.parcial2.repositories
-- DTO/Mapper: CineDto / CineMapper
-- Servicios: com.example.parcial2.services
+## Descripción
+Este proyecto implementa un backend mínimo para el cine **Cinema Nova**, cumpliendo los requisitos del Parcial 2.  
+Permite registrar la información básica de cines, sus detalles y sus salas, utilizando **Spring Boot** y **JPA** con base de datos en memoria (**H2**).
 
-Crear branch y PR:
-git checkout -b featuresantiagotexamen
-git add .
-git commit -m "Solución parcial 2 - [Tu Nombre]"
-git push origin featuresantiagotexamen
+## Funcionalidades
+- Persistencia de entidades:
+   - **Cine** (nombre, dirección)
+   - **DetalleCine** (teléfono, email, relación 1:1 con Cine)
+   - **Sala** (nombre, capacidad, relación N:1 con Cine)
+- Repositorios con consultas personalizadas.
+- Servicios que implementan la operación de guardado.
+- DTO + Mapper para la entidad **Cine**.
+- Inserción de datos iniciales con `Bootstrap`.
+
+## Estructura del código
+- **Entities:** `com.example.parcial2.entities`
+- **Repositories:** `com.example.parcial2.repositories`
+- **Services:** `com.example.parcial2.services`
+- **DTO/Mapper:** `com.example.parcial2.dto` / `com.example.parcial2.mappers`
+- **Bootstrap:** `com.example.parcial2.Bootstrap` (datos de prueba)
+
